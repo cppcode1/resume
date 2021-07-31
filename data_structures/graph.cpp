@@ -17,7 +17,7 @@ the example:
 3 0 1 1
 |- vertexes for second any item
 
-- list
+- linked list
 
 the example:
 item1 : {edges - links to other items}
@@ -38,7 +38,8 @@ using std::cout;
 using std::endl;
 using std::list;
 using std::string;
-using std::set;
+using std::map;
+
 
 struct vertex final
 {
@@ -48,20 +49,34 @@ struct vertex final
 
 struct graph final
 {
-    set<vertex> vertexes;
+    map<string, vertex*> vertexes;
+    vertex* head;
 
-    // it creates a relation between two vertexes
-    /*void add_edge(vertex* const item1, vertex* const item2)
+    void add_vertex(string data)
     {
-        vertexes[&item1].edges.push_back(item2);
-        vertexes[&item2].edges.push_back(item1);
-    }*/
+      // create a new vertex
+      vertex* item = new vertex;
+      item->data = data;
+
+      // speed access to a desired vertex by a string
+      vertexes[item->data] = item;
+
+      // set a handler to the whole graph
+      if (head == nullptr)
+        head = item;
+    }
+
+    // it creates a relation between two vertexes to tie items together
+    void add_edge(vertex* const item1, vertex* const item2)
+    {
+        vertexes[item1->data]->edges.push_back(item2);
+        vertexes[item2->data]->edges.push_back(item1);
+    }
 
     // remove a relation between two vertexes
     void remove_edge(vertex* const item1, vertex* const item2)
     {}
 };
-
 
 int main()
 {
