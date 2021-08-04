@@ -25,7 +25,7 @@ item2 : {edges - links to other items}
 item3 : {edges - links to other items}
   |- vertexes
 
-below there in my pesonal implementation of a graph. the underlying structure is a list.
+below there in my pesonal implementation of a graph. the underlying structure is a linked list.
 */
 
 #include <iostream>
@@ -81,5 +81,6 @@ struct graph final
 int main()
 {
     graph world_map;
+    world_map.add_vertex("Russia");
     return 0;
 }
