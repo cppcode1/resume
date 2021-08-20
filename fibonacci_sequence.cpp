@@ -21,6 +21,7 @@ int get_fibonacci_number(const int count, const int previous1 = 0, const int pre
     const int number = previous1 + previous2;
     cout << count << ": " << number << endl;
 
+    // just return the value if this is the last number in sequence
     if (count == 1)
         return number;
 
@@ -30,7 +31,7 @@ int get_fibonacci_number(const int count, const int previous1 = 0, const int pre
 
 int main()
 {
-    // get first 10 number starting from 0 and 1
+    // get first 10 numbers starting from 0 and 1
     get_fibonacci_number(10, 0, 1);
     return 0;
 }
