@@ -2,7 +2,7 @@
 
 copyright 2021 Oleksandr Chastukhin
 
-the goal is to implement a function for compute number from Fibonacci sequence.
+the goal is to implement a function to compute number from Fibonacci sequence.
 */
 
 #include <iostream>
