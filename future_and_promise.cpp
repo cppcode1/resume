@@ -33,7 +33,7 @@ int main()
     // another thread will compule this result for us
     promise<int> result;
 
-    // we sill get the result in the future
+    // we will get the result in the future
     auto future_result = result.get_future();
 
     // here we create another thread and move the promise object there
