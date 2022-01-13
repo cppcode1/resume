@@ -58,14 +58,14 @@ int main()
 {
     const int invalid_value = -1;
     std::vector<int> values{10,-1,20,30,-1,40,-1,50,60,70};
-    print(values, 0);
+    print(values);
 
     MoveInvalidValuesToLeft(values, -1);
     cout << endl;
-    print(values, 0);
+    print(values);
 
     /*std::vector<int> test2{-1,56,45,-1,8,27,-1,91,38,11,-1};
-    print(test2, 0);
+    print(test2);
     start = MoveInvalidValuesToLeft(test2, invalid_value);
     print(test2, start);*/
 }
