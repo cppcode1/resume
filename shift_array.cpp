@@ -1,5 +1,5 @@
 // copyright 2022 Oleksandr Chastukhin
-// the goal this to move the wrong elements -1 to the right and keep the order of good elements
+// the goal is to move the wrong elements -1 to the right and keep the order of good elements
 
 #include <iostream>
 #include <vector>
