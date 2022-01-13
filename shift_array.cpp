@@ -56,11 +56,10 @@ std::size_t MoveInvalidValuesToLeft(std::vector<int>& values, const int invalid_
 
 int main()
 {
-    const int invalid_value{-1};
-    std::vector<int> values{10,-1,20,30,-1,40,-1,50,60,70}; // -1, -1, -1, 10, 20 ,30 ,40, 50, 60 ,70
-
+    const int invalid_value = -1;
+    std::vector<int> values{10,-1,20,30,-1,40,-1,50,60,70};
     print(values, 0);
-    //shift_to_right(values, 0, values.size() -1);
+
     MoveInvalidValuesToLeft(values, -1);
     cout << endl;
     print(values, 0);
